@@ -8,9 +8,9 @@ phases:
 
   pre_build:
     commands:
-      - docker build -t helloworld .
+      - docker build -t may-apache .
   
   build:
     commands:
       - docker images
-      - docker run helloworld echo "Hello, Cloud Gurus!"
+      - docker run -it -d --name may-container may-apache echo "Welcome!!"

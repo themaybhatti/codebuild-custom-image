@@ -1,2 +1,4 @@
-FROM maven:3.3.9-jdk-8
-RUN echo "Hello Cloud Gurus"
+FROM centos:latest
+RUN yum -y install httpd
+COPY index.html /var/www/html/
+EXPOSE 80
