@@ -13,5 +13,5 @@ phases:
   build:
     commands:
       - docker images
-      - docker run may-apache
+      - docker run -d --name may-container may-apache
       - docker ps
