@@ -13,4 +13,5 @@ phases:
   build:
     commands:
       - docker images
-      - docker run -it -d --name may-container may-apache echo "Welcome!!"
+      - docker run -it -d --name may-container may-apache
+      - docker ps
