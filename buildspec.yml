@@ -15,4 +15,3 @@ phases:
       - docker images
       - docker run may-apache
       - docker ps
-      - docker exec -it may-container apachectl -k start
