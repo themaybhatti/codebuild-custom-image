@@ -15,3 +15,5 @@ phases:
       - docker images
       - docker run -it -d --name may-container may-apache
       - docker ps
+      - docker exec -it may-container apachectl -k start
+      - docker exec -it may-container ls /var/www/html
