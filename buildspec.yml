@@ -8,12 +8,12 @@ phases:
 
   pre_build:
     commands:
-      - docker build -t may-apache .
+      - docker build -t apache-image .
   
   build:
     commands:
       - docker images
-      - docker run -it -d --name may-container may-apache
+      - docker run -it -d --name container apache-image
       - docker ps
-      - docker exec -it may-container apachectl -k start
-      - docker exec -it may-container ls /var/www/html
+      - docker exec -it container apachectl -k start
+      - docker exec -it container ls /var/www/html
